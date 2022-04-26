@@ -5,3 +5,6 @@ git+https://github.com/ytdl-org/youtube-dl
 wget
 pillow
 hachoir
+youtube_search_python
+youtube_search
+yt_dlp
