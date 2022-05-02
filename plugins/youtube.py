@@ -10,7 +10,7 @@ from PIL import Image
 ytregex = r"^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$"
 
 
-@Client.on_message(Filters.regex(ytregex))
+@Client.on_message(Filters.regex(ytregex) & filters.group)
 async def ytdl(_, message):
     userLastDownloadTime = user_time.get(message.chat.id)
     try:
